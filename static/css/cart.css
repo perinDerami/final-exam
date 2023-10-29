@@ -1,0 +1,263 @@
+* {
+    border:0;
+    margin:0;
+    padding:0;
+    line-height: 1.2;
+}
+body {
+    background-color: grey;
+}
+.img {
+    width: 100%;
+    height: 50vh;
+    background-image: url('../images/friendly-shop.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page:not(.cartbox) {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    right: 10%;
+    top: 15%;
+    gap: 20px;
+}
+.contact {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 700px;
+    background: linear-gradient(40deg, #ff4d4d, #0dcaf0);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 17px;
+}
+.cartbox {
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(40deg, #ff4d4d, #0dcaf0);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.space {
+    margin-top : 150px;
+}
+.margin_right {
+    margin-right: 20px;
+}
+.center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#escape-button {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: #50C878;
+    font-family: kalameh;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.01s;
+    -webkit-transition: transform 0.01s;
+    -moz-transition: transform 0.01s;
+    -ms-transition: transform 0.01s;
+    -o-transition: transform 0.01s;
+}
+#escape-button:hover {
+    transform: scale(1.1);
+    transition: transform 0.01s;
+    -webkit-transition: transform 0.01s;
+    -moz-transition: transform 0.01s;
+    -ms-transition: transform 0.01s;
+    -o-transition: transform 0.01s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+#escape-button:active {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+.row {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.cartHead span:not(.material-symbols-outlined) {
+    font-family: dana;
+    direction: rtl;
+    font-size: 17px;
+}
+.cartHead {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: right;
+    gap: 40px;
+}
+h3 {
+    font-family: dana;
+    color:black;
+    font-size: 10px;
+}
+.grid-items {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 450px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+ul {
+    padding: 20px;
+    list-style-type: none;
+}
+ul li {
+    padding: 10px;
+    width: 80%;
+    background-color: white ;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+li form .buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.grid-items img {
+    height: 80px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+.detail {
+    direction: rtl;
+    margin-left: 20px;
+}
+h4 {
+    font-family: dana;
+    margin-top: 15px;
+    font-size: 13px;
+}
+a form {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 60px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #0096FF;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+li form .buttons button {
+    background-color: #0096FF;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+li form .buttons button:hover {
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+}
+a form:hover {
+    height: 80px;
+    width: 179px;
+    margin-right: 10px;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+a form button:hover {
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.basket {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border:none;
+    background-color: none;
+}
+.basket::after {
+    content: attr(data-count);
+    position: absolute;
+	top: 1.2rem;
+	right: -1.2rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 30%;
+	-webkit-border-radius: 30%;
+	-moz-border-radius: 30%;
+	-ms-border-radius: 30%;
+	-o-border-radius: 30%;
+	background-color: white;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 9px;
+}
+.addbasket {
+    display: none;
+    position:absolute;
+    flex-direction: column;
+    height:50px;
+    width: 200px;
+    background-color: #50C878;
+    text-align: end;
+    top: 10%;
+    right: 1%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.activeProduct {
+    display: block;
+}
+.addbasket span {
+    font-size: 20px;
+}

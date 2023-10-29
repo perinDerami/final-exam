@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="../static/css/cart.css">
+        <link rel="stylesheet" href="../static/css/font.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <title>Cart page</title>
+    </head>
+    <body>
+        <i class="material-symbols-outlined basket" data-count="{{count}}">shopping_basket</i>
+        <div class="addbasket">
+            <span>به سبد خرید افزوده شد.</span>
+        </div>
+        <div class="img"></div>
+        <div class="page">
+            <div class="cartbox">
+                <div class="cartHead">
+                    <div class="space row margin_right">
+                        <span class="material-symbols-outlined">credit_card</span><span>ارزان ترین ها را با ما تجربه کنید</span>
+                    </div>
+                    <div class="row margin_right">
+                        <span class="material-symbols-outlined">shopping_bag</span><span>تعداد کل : </span><span class="price">{{ items|length }}</span>
+                    </div>
+                    <div class="row margin_right">
+                        <span class="material-symbols-outlined">payments</span><span>قیمت کل : </span><span class="price">{{price}} تومان</span>
+                    </div>
+                    <div id="escapecon" class="center row">
+						<form action="/" method="POST">
+							{% csrf_token %}
+							<input type="hidden" name="type" value="reset">
+							<button type="submit" id="escape-button">پرداخت</button>
+						</form>
+                    </div>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="product">
+                    <ul class="grid-items">
+						{% for item in items %}
+							<li>
+								<a href="#">
+									<img src="{{item.product.image.url}}" alt="product">
+									<div class="detail">
+										<h3>{{item.product.name}}</h3>
+										<h4>{{item.product.price}} تومان</h4>
+									</div>
+								</a>
+								<form method="POST" action="">
+									{% csrf_token %}
+									<input type="hidden" name="product-id" value="{{item.product.id}}">
+									<input type="hidden" name="href" value="cart">
+									<div class="buttons">
+										<button class="add" name="type" value="add"><span class="material-symbols-outlined">add</span></button>
+										<span class="count">{{item.product_count}}</span>
+										<button class="remove" name="type" value="remove"><span class="material-symbols-outlined">remove</span></button>
+									</div>
+								</form>
+							</li>
+						{% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../static/js/main.js"></script>
+    </body>
+</html>

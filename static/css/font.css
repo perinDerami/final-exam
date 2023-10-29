@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'iran';
+    src: url('../font/iran.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'kalameh';
+    src: url('../font/kalameh.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'dana';
+    src: url('../font/dana.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'morabba';
+    src: url('../font/Morabba-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IRANSans';
+    src: url('../font/IRANSans.ttf') format('truetype');
+}
+@font-face {
+    font-family: "vazir";
+    src:
+      url('../font/vazir-font-v16.1.0/Vazir.ttf') format('truetype'),
+      url('../font/vazir-font-v16.1.0/Vazir.woff') format('woff'),
+      url('../font/vazir-font-v16.1.0/Vazir.woff2') format('woff2'),
+      url('../font/vazir-font-v16.1.0/Vazir.eot') format('eot');
+}

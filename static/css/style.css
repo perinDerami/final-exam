@@ -1,0 +1,179 @@
+* {
+    border:0;
+    margin:0;
+    padding:0;
+    line-height: 1.2;
+}
+body {
+    background-color: grey;
+}
+.img {
+    width: 100%;
+    height: 50vh;
+    background-image: url('../images/friendly-shop.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact {
+    position: absolute;
+    top: 40%;
+    left: 22%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 800px;
+    background: linear-gradient(40deg, #ff4d4d, #0dcaf0);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+h3 {
+	font-family: dana;
+    color:black;
+    font-size: 15px;
+}
+.grid-items {
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: flex-start;
+    width: 92%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+ul {
+    padding: 20px;
+    list-style-type: none;
+}
+ul li {
+    padding: 10px;
+    width: 100%;
+    background-color: white ;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.product {
+	position: relative;
+	height: 500px;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-top: 15px;
+}
+.grid-items img {
+    height: 80px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+a {
+    display: flex;
+	justify-content: space-between;
+    text-decoration: none;
+    color: black;
+}
+.detail {
+	display: block;
+    margin-left: 10px;
+	text-align: start;
+	justify-content: start;
+	align-items: start;
+	margin-top: 15px;
+	direction: rtl;
+	padding: 10px;
+}
+h4 {
+	font-family: dana;
+    margin-top: 15px;
+    font-size: 10px;
+}
+a form {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 90px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #0096FF;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+a form button {
+    background-color: #0096FF;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+a form:hover {
+    height: 80px;
+    width: 218px;
+    margin-right: 10px;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+a form button:hover {
+    height: 100%;
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.basket {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+	width: 1.6rem;
+	height: 1.6rem;
+    border:none;
+    background-color: none;
+}
+.basket::after {
+    content: attr(data-count);
+    position: absolute;
+	top: 1.2rem;
+	right: -1.2rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 30%;
+	-webkit-border-radius: 30%;
+	-moz-border-radius: 30%;
+	-ms-border-radius: 30%;
+	-o-border-radius: 30%;
+	background-color: white;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 9px;
+}
+.addbasket {
+    display: none;
+    position:absolute;
+    flex-direction: column;
+    height:50px;
+    width: 200px;
+    background-color: #50C878;
+    text-align: end;
+    top: 10%;
+    right: 1%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.activeProduct {
+    display: block;
+}
+.addbasket span {
+    font-size: 20px;
+}
